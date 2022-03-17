@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0"/>
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="favicon.png">
+<title>Sandip Bhattacharya - Software Trainer, Developer, Entrepreneur</title>
+<meta name="keywords" content="Android Trainer kolkata, Java Trainer kolkata, C Trainer kolkata, C Plus Plus(C++) Trainer kolkata, JavaScript Trainer kolkata, jQuery Trainer kolkata, PHP/MySQL Trainer kolkata, SQL Trainer kolkata, Linux Trainer kolkata, Other Software Trainer kolkata, Academic IT Project Guide kolkata" />
+<meta name="description" content="Sandip Bhattacharya is a Software Trainer, a passionate Software Developer from Kolkata, India. M.Tech, 12 years of exp. in Software Industry." />
+<meta name="author" content="Sandip Bhattacharya" />
+<!-- Bootstrap core CSS -->
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet">
+<link href="css/plugin.css" rel="stylesheet">
+<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" >
+<!-- Custom styles for this template -->
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<header class="main-head">
+    <div class="container">
+      <div class="logo clearfix"> 
+      	<a href="index.php">
+        	<img src="images/sandip-bhattacharya-logo.png" alt="logo" />
+            <p>Sandip<strong>Bhattacharya</strong> <br><span>Explore, Learn, Grow...</span></p>
+        </a> 
+      </div>
+      <div class="header-rgt clearfix">
+        <div class="navWrap">
+          <div class="navigation">
+            <nav>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="personal-training.html">Personal Training</a></li>
+                <li><a href="about-me.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li class="active"><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="small_nav"></div>
+        </div>
+      </div>
+    </div>
+</header>
+<div class="inner-banner">
+	<div class="container">
+    	<h2>contact me</h2>
+    </div>
+</div>
+<div class="contact-pg">
+    <div class="contact-details displayTable">
+    	<div class="displayCell tableWidth-half">
+            <div class="contact-details-left contact-eql-height">
+                <h1>Get in touch</h1>
+                <ul>
+                    <li>
+                        <h3><i class="fas fa-map-marker-alt"></i>  Address :</h3>
+                        <p>143 Bhattacharjee Para Road, Kolkata-700063</p>
+                    </li>
+                    <li>
+                        <h3><i class="far fa-envelope"></i> Email :</h3>
+                        <p><a href="mailto:sandip.bhattacharya16@gmail.com" target="_blank">sandip.bhattacharya16@gmail.com</a></p>
+                    </li>
+                    <li>
+                        <h3><i class="fas fa-phone-alt"></i> Phone :</h3>
+                        <p><a href="tel:918697505520" target="_blank">+91 8697505520</a></p>
+                    </li>
+                    <li>
+                        <h3><i class="fab fa-skype"></i> Skype :</h3>
+                        <p>sandip.nsec</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="displayCell tableWidth-half">
+            <div class="contact-map contact-eql-height">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.7984718600146!2d88.30702441443228!3d22.474206242239966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027a66aaf054f5%3A0xb1f3ea961203a0af!2sSandip%20Bhattacharya!5e0!3m2!1sen!2sin!4v1598713263367!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="contact-query">
+    	<div class="container">
+        	<h2>Send me any query</h2>
+            <form method="post" action="" id="my-form">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>First name</label>
+                        <input type="text" name="fName" required />
+                    </div>
+                    <div class="col-sm-6">
+                        <label>Last name</label>
+                        <input type="text" name="lName" />
+                    </div>
+                    <div class="col-sm-6">
+                        <label>Email</label>
+                        <input type="email" name="email" required />
+                    </div>
+                    <div class="col-sm-6">
+                        <label>Country</label>
+                        <input type="text" name="country" required />
+                    </div>
+                    <div class="col-sm-12">
+                        <label>Message</label>
+                        <textarea name="message" required></textarea>
+                    </div>
+                    <div class="col-sm-12">
+                        <input type="submit" value="submit" name="enquirySubmitButton" />
+                    </div>
+                </div>
+            </form>
+            <p>
+            <?php 	
+		if(isset($_POST['enquirySubmitButton']))
+		{
+			$fName = test_Input($_POST['fName']);
+			$lName = test_Input($_POST['lName']);
+			$email = test_Input($_POST['email']);
+			$country = test_Input($_POST['country']);
+			$message = test_Input($_POST['message']);
+			if(strlen($fName) <=60 && strlen($lName) <=60 && strlen($email) <=60 && strlen($country) <=40 && strlen($message) <=1000){
+				$to = "sandip.nsec@gmail.com";
+				$subject = "New enquiry from SandipBhattacharya.com";
+				$txt = "First Name: " . $fName . "\r\nLast Name: " . $lName . "\r\n";
+				$txt .= "Email: " . $email . "\r\nCountry: " . $country . "\r\n";
+				$txt .= "Message: " . $message;
+				$headers = "From: sandip@sandipbhattacharya.com" . "\r\n";
+				if(mail($to,$subject,$txt,$headers)){
+					echo "Thanks for sending your query. I'll get back to you soon.";
+				}
+			}
+			else{
+				echo "Something went wrong. Please try again later.";
+			}
+		}
+		function test_input($data) {
+		  $data = trim($data);
+		  $data = stripslashes($data);
+		  $data = htmlspecialchars($data);
+		  $data =  strip_tags($data);
+		  return $data;
+		}
+		?>
+        </p>
+        </div>
+    </div>
+</div>
+<footer class="mainft">
+	<div class="top-footer">
+        <div class="container">
+            <div class="footer-logo clearfix"> 
+                <a href="index.php">
+                    <img src="images/sandip-bhattacharya-logo.png" alt="logo">
+                    <p>Sandip<strong>Bhattacharya</strong> <br><span>Explore, Learn, Grow...</span></p>
+                </a> 
+          	</div>
+            <div class="link-footer">
+            	<ul>      
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="personal-training.php">Personal Training</a></li>
+                    <li><a href="about-me.php">About Me</a></li>
+                    <li><a href="projects.php">Projects</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+            	<ul>
+               		<li><a href="http://bit.ly/SandipYouTube"><i class="fa fa-youtube"></i></a></li>
+                	<li><a href="http://bit.ly/SandipFacebook"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="http://bit.ly/SandipLinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="http://bit.ly/SandipTwitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="http://bit.ly/SandipQuora"><i class="fab fa-quora"></i></a></li>
+                    <li><a href="http://bit.ly/SandipPlay"><i class="fab fa-google-play"></i></a></li>
+                    <li><a href="http://bit.ly/SandipGitHub"><i class="fab fa-github"></i></a></li>
+                    <li><a href="http://bit.ly/SandipInsta"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-footer">
+    	<div class="container">
+        	<p>Copyright ©2020 <a href="index.php">Sandip Bhattacharya</a>. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+<!-- scroll up -->
+<a href="javascript:void(0);" class="scrollTop"><i class="fas fa-chevron-up"></i></a>
+<!-- scroll up -->
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script>
+<script src="https://use.fontawesome.com/373a347df2.js"></script>
+<script src="js/plugin.js"></script>
+<script src="js/jquery.marquee.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
